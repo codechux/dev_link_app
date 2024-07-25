@@ -54,7 +54,7 @@ const LoginPage: React.FC = () => {
       <Head>
         <title>Login - Devlinks</title>
       </Head>
-      <div className="flex flex-col min-h-screen items-center justify-center bg-gray-100">
+      <div className="flex flex-col min-h-screen items-center justify-center bg-gray-100 m-auto">
         <div className="flex justify-center mb-10 md:mb-16">
           <Image src={Logo} alt="Devlinks Logo" width={150} height={150} />
         </div>
@@ -85,12 +85,12 @@ const LoginPage: React.FC = () => {
                   placeholder="eg. alex@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent"
+                  className="w-full pl-10 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent focus:shadow-myShadow"
                 />
-                {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-                )}
               </div>
+              {errors.email && (
+                <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              )}
             </div>
             <div className="mb-6">
               <label
@@ -109,12 +109,12 @@ const LoginPage: React.FC = () => {
                   placeholder="Enter your password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent"
+                  className="w-full pl-10 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent focus:shadow-myShadow"
                 />
-                {errors.password && (
-                  <p className="text-red-500 text-xs mt-1">{errors.password}</p>
-                )}
               </div>
+              {errors.password && (
+                <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+              )}
             </div>
             {errors.server && (
               <p className="text-red-500 text-center text-sm mb-4">
@@ -123,7 +123,7 @@ const LoginPage: React.FC = () => {
             )}
             <button
               type="submit"
-              className={`w-full py-2 px-4 text-white bg-[#633CFF] rounded-md shadow-md hover:bg-[#5333CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#633CFF] ${
+              className={`w-full py-2 px-4 text-white bg-[#633CFF] rounded-md shadow-md hover:bg-[#5333CC] focus:outline-none active:shadow-myShadow  ${
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={!!loading}

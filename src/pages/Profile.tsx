@@ -18,6 +18,7 @@ const ProfileDetails: React.FC = () => {
       setProfilePic(URL.createObjectURL(e.target.files[0]));
     }
   };
+  console.log(profilePic);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,7 +62,7 @@ const ProfileDetails: React.FC = () => {
             <div className="flex items-center mb-6 bg-[#FAFAFA] justify-between p-6">
               <label>Profile picture</label>
               <div className="flex items-center gap-10">
-                <div className="w-[193px] h-[193px] bg-[#EFEBFF] border border-gray-300 rounded flex flex-col items-center justify-center mb-2">
+                <div className="w-[193px] h-[193px] bg-[#EFEBFF] border border-gray-300 flex flex-col items-center justify-center mb-2">
                   {profilePic ? (
                     <Image
                       src={profilePic}
@@ -107,7 +108,7 @@ const ProfileDetails: React.FC = () => {
                   placeholder="e.g. John"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
-                  className="border w-[550px] border-gray-300 p-2 rounded-md"
+                  className="border w-[550px] border-gray-300 p-2 rounded-md focus:shadow-myShadow focus:ring-2 focus:ring-[#633CFF] outline-none"
                   required
                 />
               </div>
@@ -118,7 +119,7 @@ const ProfileDetails: React.FC = () => {
                   placeholder="e.g. Appleseed"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="border w-[550px] border-gray-300 p-2 rounded-md"
+                  className="border w-[550px] border-gray-300 p-2 rounded-md focus:shadow-myShadow focus:ring-2 focus:ring-[#633CFF] outline-none"
                   required
                 />
               </div>
@@ -129,7 +130,7 @@ const ProfileDetails: React.FC = () => {
                   placeholder="e.g. email@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border w-[550px] border-gray-300 p-2 rounded-md"
+                  className="border w-[550px] border-gray-300 p-2 rounded-md focus:shadow-myShadow focus:ring-2 focus:ring-[#633CFF] outline-none"
                   required
                 />
               </div>
@@ -137,7 +138,7 @@ const ProfileDetails: React.FC = () => {
             <div className="flex justify-end mt-6">
               <button
                 type="submit"
-                className="bg-[#633CFF] text-white px-6 py-2 rounded-md"
+                className="bg-[#633CFF] text-white px-6 py-2 rounded-md active:shadow-myShadow "
               >
                 Save
               </button>

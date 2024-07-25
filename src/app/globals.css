@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --btn-bg: #633cff;
+  --btn-hover: #beadff;
+  --heading: #333333;
+  --primary-text: #888888;
+
+  --active-btn-border: #633cff;
+  --active-btn-shadow: 0px 0px 32px 0px #633cff40;
+  --box-shadow: 0px 0px 32px 0px #0000001a;
+
+  --border: #d9d9d9;
+  --light-bg: #fafafa;
+
+  --error-text: #ff3939;
+
+  --light-purple: #efebff;
+
+  --github-bg: #1a1a1a;
+  --youtube-bg: #ee3939;
+  --linkedin-bg: #2d68ff;
+
+  --loading: 222 47% 11%;
+  --loading-hover: 215 25% 27%;
+  --loading-foreground: 0 0% 100%;
+
+  --background: #fafafa;
+}
+
 body {
   background-color: #fafafa;
 }

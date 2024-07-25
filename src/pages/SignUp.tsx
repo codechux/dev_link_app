@@ -99,7 +99,7 @@ const CreateAccountPage: React.FC = () => {
                 Email address
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 top-0 left-0 pl-3 flex items-center pointer-events-none">
                   <AiFillMail className="text-[#737373]" />
                 </div>
                 <input
@@ -110,12 +110,12 @@ const CreateAccountPage: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className={`w-full pl-10 px-3 py-2 border ${
                     errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent`}
+                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent focus:shadow-myShadow`}
                 />
-                {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-                )}
               </div>
+              {errors.email && (
+                <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              )}
             </div>
             <div className="mb-4">
               <label
@@ -136,12 +136,12 @@ const CreateAccountPage: React.FC = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   className={`w-full pl-10 px-3 py-2 border ${
                     errors.password ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent`}
+                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent focus:shadow-myShadow`}
                 />
-                {errors.password && (
-                  <p className="text-red-500 text-xs mt-1">{errors.password}</p>
-                )}
               </div>
+              {errors.password && (
+                <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+              )}
             </div>
             <div className="mb-4">
               <label
@@ -152,7 +152,7 @@ const CreateAccountPage: React.FC = () => {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <IoIosUnlock className="text-[#737373]" />
+                  <IoIosUnlock className="text-[#737373] " />
                 </div>
                 <input
                   type="password"
@@ -164,14 +164,14 @@ const CreateAccountPage: React.FC = () => {
                     errors.confirmPassword
                       ? "border-red-500"
                       : "border-gray-300"
-                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent`}
+                  } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#633CFF] focus:border-transparent focus:shadow-myShadow`}
                 />
-                {errors.confirmPassword && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.confirmPassword}
-                  </p>
-                )}
               </div>
+              {errors.confirmPassword && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.confirmPassword}
+                </p>
+              )}
             </div>
             {errors.general && (
               <p className="text-red-500 text-xs mt-1">{errors.general}</p>
@@ -181,7 +181,7 @@ const CreateAccountPage: React.FC = () => {
             </p>
             <button
               type="submit"
-              className="w-full py-2 px-4 text-white bg-[#633CFF] rounded-md shadow-md hover:bg-[#633CFF] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#633CFF]"
+              className="w-full py-2 px-4 text-white bg-[#633CFF] rounded-md shadow-md hover:bg-[#633CFF] focus:outline-none active:shadow-myShadow"
               disabled={!!loading}
             >
               {loading ? "Creating account..." : "Create new account"}
